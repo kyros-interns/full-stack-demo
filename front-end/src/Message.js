@@ -12,7 +12,7 @@ const Message = ({ message }) => {
 
   return (
     <>
-      <article className="Message-article">
+      <article className='Message-article'>
         <h2>{message.name}</h2>
         <p>{message.message}</p>
         <time>

@@ -13,9 +13,8 @@ app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
 
 // connect to database
-mongoose
-  .connect(`${process.env.DB_CONNECTION_STRING}`)
-  .then(data => console.log(`Connected to MongoDB`))
+mongoose.connect(`${process.env.DB_CONNECTION_STRING}`)
+  .then(data => console.log('Connected to MongoDB'))
   .catch(err => console.error(`Failed to connect to MongoDB: ${err}`))
 
 // load the dataabase models we want to deal with
@@ -28,14 +27,14 @@ app.get('/messages', async (req, res) => {
   try {
     const messages = await Message.find({})
     res.json({
-      messages: messages,
-      status: 'all good',
+      messages,
+      status: 'all good'
     })
   } catch (err) {
     console.error(err)
     res.status(400).json({
       error: err,
-      status: 'failed to retrieve messages from the database',
+      status: 'failed to retrieve messages from the database'
     })
   }
 })
@@ -46,17 +45,17 @@ app.post('/messages/save', async (req, res) => {
   try {
     const message = await Message.create({
       name: req.body.name,
-      message: req.body.message,
+      message: req.body.message
     })
     return res.json({
-      message: message, // return the message we just saved
-      status: 'all good',
+      message, // return the message we just saved
+      status: 'all good'
     })
   } catch (err) {
     console.error(err)
     return res.status(400).json({
       error: err,
-      status: 'failed to save the message to the database',
+      status: 'failed to save the message to the database'
     })
   }
 })

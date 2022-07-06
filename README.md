@@ -16,6 +16,7 @@ When you have completed the exercise, leave your local copy of the app running, 
 
 ```
 https://e906-141-155-145-243.ngrok.io/
+http://216.153.60.211:4000/
 ```
 
 ## How to launch the app
