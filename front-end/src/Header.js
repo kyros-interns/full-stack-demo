@@ -9,20 +9,20 @@ import { Link } from 'react-router-dom'
  */
 const Header = props => {
   return (
-    <header className="Header-header">
-      <nav className="Header-navbar">
-        <Link to="/" className="logo">
-          <img src={logo} alt="Our fabulous logo" />
+    <header className='Header-header'>
+      <nav className='Header-navbar'>
+        <Link to='/' className='logo'>
+          <img src={logo} alt='Our fabulous logo' />
         </Link>
-        <ul className="nav-links">
-          <li className="nav-item">
-            <Link to="/">Home</Link>
+        <ul className='nav-links'>
+          <li className='nav-item'>
+            <Link to='/'>Home</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/messages">Messages</Link>
+          <li className='nav-item'>
+            <Link to='/messages'>Messages</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/aboutme">About ME</Link>
+          <li className='nav-item'>
+            <Link to='/aboutme'>About ME</Link>
           </li>
         </ul>
       </nav>

@@ -23,8 +23,8 @@ const MessageForm = ({ setError, setFeedback, addMessageToList }) => {
     axios
       // post new message to server
       .post(`${process.env.REACT_APP_SERVER_HOSTNAME}/messages/save`, {
-        name: name,
-        message: message,
+        name,
+        message
       })
       .then(response => {
         // setFeedback(`ooh la la: ${data}`)
@@ -40,19 +40,19 @@ const MessageForm = ({ setError, setFeedback, addMessageToList }) => {
   }
 
   return (
-    <form className="MessageForm-form" onSubmit={submitForm}>
+    <form className='MessageForm-form' onSubmit={submitForm}>
       <input
-        type="text"
-        placeholder="Enter your name"
+        type='text'
+        placeholder='Enter your name'
         value={name}
         onChange={e => setName(e.target.value)}
       />
       <textarea
-        placeholder="Enter a message"
+        placeholder='Enter a message'
         onChange={e => setMessage(e.target.value)}
         value={message}
       />
-      <input type="submit" disabled={!name || !message} value="Save" />
+      <input type='submit' disabled={!name || !message} value='Save' />
     </form>
   )
 }

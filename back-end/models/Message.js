@@ -5,15 +5,15 @@ const messageSchema = new Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     message: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   {
-    timestamps: true,
+    timestamps: true
   }
 )
 
@@ -22,5 +22,5 @@ const Message = mongoose.model('Message', messageSchema)
 
 // export the model so other modules can import it
 module.exports = {
-  Message,
+  Message
 }

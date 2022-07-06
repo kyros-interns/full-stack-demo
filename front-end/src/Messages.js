@@ -68,8 +68,8 @@ const Messages = props => {
     <>
       <h1>Leave a message!</h1>
 
-      {feedback && <p className="MessageForm-feedback">{feedback}</p>}
-      {error && <p className="MessageForm-error">{error}</p>}
+      {feedback && <p className='MessageForm-feedback'>{feedback}</p>}
+      {error && <p className='MessageForm-error'>{error}</p>}
 
       <MessageForm
         setError={setError}
@@ -77,8 +77,8 @@ const Messages = props => {
         addMessageToList={addMessageToList}
       />
 
-      {error && <p className="Messages-error">{error}</p>}
-      {!loaded && <img src={loadingIcon} alt="loading" />}
+      {error && <p className='Messages-error'>{error}</p>}
+      {!loaded && <img src={loadingIcon} alt='loading' />}
       {messages.map(message => (
         <Message key={message._id} message={message} />
       ))}

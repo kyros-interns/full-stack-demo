@@ -19,5 +19,5 @@ const close = () => {
 
 // export the close function
 module.exports = {
-  close: close,
+  close
 }

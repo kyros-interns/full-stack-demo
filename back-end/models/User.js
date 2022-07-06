@@ -5,19 +5,19 @@ const userSchema = new Schema(
   {
     email: {
       type: String,
-      required: true,
+      required: true
     },
     handle: {
       type: String,
-      required: true,
+      required: true
     },
     passwordHash: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   {
-    timestamps: true,
+    timestamps: true
   }
 )
 
@@ -26,5 +26,5 @@ const User = mongoose.model('User', userSchema)
 
 // export the model so other modules can import it
 module.exports = {
-  User,
+  User
 }
